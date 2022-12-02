@@ -1,7 +1,9 @@
 //Estos son los 2 elementos basicos para renderizar la App
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { FirstApp } from './FirstApp';
 import { HelloWorldApp } from './HelloWorldApp';
+
 //
 
 
@@ -10,6 +12,6 @@ import { HelloWorldApp } from './HelloWorldApp';
 ReactDOM.createRoot(document.getElementById('root')).render(
     // React siempre se ejecuta en StrictMode
     <React.StrictMode>
-        <HelloWorldApp />
+        <FirstApp />
     </React.StrictMode>
 );
