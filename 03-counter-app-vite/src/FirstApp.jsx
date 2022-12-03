@@ -1,5 +1,16 @@
+const getResult=(a, b)=>{
+  return a+b;
+}
+
 export const FirstApp = () => {
+  
   return (
-    <h1>Primer componente Diego</h1>
+    //Fragmentos
+    <>
+      <h1>{getResult(5,3)}</h1>
+      {/* <code>{JSON.stringify(newMessage)}</code> */}
+      <p>Soy un subtitulo</p>
+    </>
+    
   )
 }
