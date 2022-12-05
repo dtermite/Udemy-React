@@ -3,6 +3,10 @@ const getResult=(a, b)=>{
 }
 
 export const FirstApp = ({title, subTitle}) => {
+
+  if (!title){
+    throw new Error('El title no existe');
+  }
   
   
   return (
