@@ -26,3 +26,9 @@ FirstApp.PropTypes ={
   title:PropTypes.string.isRequired,
   subTitle:PropTypes.number.isRequired,
 }
+
+FirstApp.defaultProps={
+  //Las default props entran antes que los tipos
+  title:"No hay titulo",
+  subTitle:"No hay subtitulo"
+}
