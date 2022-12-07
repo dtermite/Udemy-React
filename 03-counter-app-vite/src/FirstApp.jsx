@@ -1,13 +1,11 @@
+import PropTypes from 'prop-types';
+
 const getResult=(a, b)=>{
   return a+b;
 }
 
 export const FirstApp = ({title, subTitle}) => {
 
-  if (!title){
-    throw new Error('El title no existe');
-  }
-  
   
   return (
     //Fragmentos
@@ -16,7 +14,15 @@ export const FirstApp = ({title, subTitle}) => {
       {/* <code>{JSON.stringify(newMessage)}</code> */}
       <p>Soy un titulo</p>
       <h2>{title}</h2>
+      <h2>{subTitle}</h2>
     </>
     
   )
+}
+
+FirstApp.PropTypes ={
+  /* Con la palabra es isRequired es obligatorio, 
+  si no la omito, en la consola se ve el error pero no en el navegador*/
+  title:PropTypes.string.isRequired,
+  subTitle:PropTypes.number.isRequired,
 }

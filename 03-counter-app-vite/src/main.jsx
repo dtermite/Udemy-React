@@ -13,6 +13,6 @@ import './styles.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
     // React siempre se ejecuta en StrictMode
     <React.StrictMode>
-        <FirstApp  />
+        <FirstApp title="Soy Diego" subTitle={1967} />
     </React.StrictMode>
 );
