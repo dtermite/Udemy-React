@@ -14,6 +14,6 @@ import './styles.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
     // React siempre se ejecuta en StrictMode
     <React.StrictMode>
-        <CounterApp value={ 2022 } />
+        <CounterApp value={ 1967 } />
     </React.StrictMode>
 );
