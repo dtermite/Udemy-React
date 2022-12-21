@@ -5,10 +5,13 @@ export const GifExpertApp = () => {
 
   const [categories, setCategories] = useState(['One punch', 'Dragon Ball']);
 
-  const onAddCategory= () =>{
+  const onAddCategory= (newCategory) =>{
     // el push se utiliza para Javasript con arreglos en react no
     //categories.push('Otro elemento');
-    setCategories(['Valorant',...categories]);
+
+    if(categories.includes(newCategory)) return;
+    
+    setCategories([newCategory,...categories]);
 
   }
 
@@ -20,7 +23,11 @@ export const GifExpertApp = () => {
         <h1>GifExpertApp</h1>
         
       {/*Imput */}
-      < AddCategory setCategories={ setCategories}/>
+
+      < AddCategory 
+      //setCategories={ setCategories}
+        onNewCategory={ (event) => onAddCategory(event)}
+      />
 
 
       {/*Listado de Gif */}
