@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { AddCategory }from './components/AddCategory'
 
 export const GifExpertApp = () => {
 
   const [categories, setCategories] = useState(['One punch', 'Dragon Ball']);
 
   const onAddCategory= () =>{
+    // el push se utiliza para Javasript con arreglos en react no
+    //categories.push('Otro elemento');
+    setCategories(['Valorant',...categories]);
 
   }
 
@@ -16,11 +20,12 @@ export const GifExpertApp = () => {
         <h1>GifExpertApp</h1>
         
       {/*Imput */}
+      < AddCategory />
 
 
       {/*Listado de Gif */}
         {/* Gif item */}
-        <button>Agregar</button>
+        <button onClick={onAddCategory}>Agregar</button>
         <ol>
           {
             categories.map(category=>{
